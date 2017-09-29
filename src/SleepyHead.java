@@ -19,7 +19,7 @@
 			isWeekday=false;
 				
 			}
-		int vacation= JOptionPane.showConfirmDialog(null, "Is it a vacation day?","",JOptionPane.YES_NO_OPTION);
+		x= JOptionPane.showConfirmDialog(null, "Is it a vacation day?","",JOptionPane.YES_NO_OPTION);
 		if(x==0) {
 			isVacation=true;		
 		}else {
@@ -32,25 +32,28 @@
 			 * print “get up lazybones!” If it is a weekday, and we are on vacation,
 			 * print “sleep in”.
 			 */
-		if(isWeekday==true) {
+		
+		if(isWeekday&&!isVacation) {
 			JOptionPane.showMessageDialog(null, "Get up lazybones!");
+			
+		}	
 		
-		}
 		
-if(isWeekday==true&&!isVacation) {
-	JOptionPane.showMessageDialog(null, "Get up lazybones!");
-	
-}else {
-JOptionPane.showMessageDialog(null, "Sleep in");	
-	
+		
+if(isWeekday&&isVacation) {
+	JOptionPane.showMessageDialog(null, "Sleep in!");
+}
+
+if(!isWeekday)	{
+JOptionPane.showMessageDialog(null, "Sleep in");
 
 }
 		
-		
-		
-		
+		}	
 		
 	}
-	}
+		
+	
+	
 
 
